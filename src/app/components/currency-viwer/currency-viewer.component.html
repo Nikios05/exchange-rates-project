@@ -1,0 +1,9 @@
+<div>
+  <select [(ngModel)]="current_currency_type">
+    <option *ngFor="let currency_type of all_currencies_type">
+      {{ currency_type }}
+    </option>
+  </select>
+  <p>{{ current_currency_type }}: <strong>{{ currency_value }} ₽</strong></p>
+  <p>Update time: {{ data_request_service.update_time | date : 'd MMM, H:mm:ss' }}</p>
+</div>
